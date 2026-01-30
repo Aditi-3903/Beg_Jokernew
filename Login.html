@@ -1,0 +1,165 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    
+      
+    <link rel="stylesheet" href="Login.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main id="main">
+      <div class="header">
+        <nav>
+          <div class="beg">Beg Jocker</div>
+          <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us </a>
+            <a href="Login.html">Register</a>
+            <a href="Featured.html">Featured</a>
+            <a href="Contact.html">Contact Us</a>
+          </div>
+          <div class="icon" style="color: black">
+           <i id="Pro"class="fa-solid fa-user"></i>
+            <i id="face" class="fa-brands fa-facebook"></i>
+            <i id="insta" class="fa-brands fa-instagram"></i>
+            <i id="twit" class="fa-brands fa-twitter"></i>
+          </div>
+        </nav>
+      </div>
+
+      <div id="resultMessage"></div>
+
+
+      <!-- ---------------------new3form--------------------------- -->
+
+
+       <form   class="form" >
+        <h2>Registration Form</h2><br><br>
+        <fieldset >
+            <label for="naam">Name : </label>
+            <input type="text"  id="naam"><br> <br>
+            <label for="adrs">Address :</label>
+            <input type="text" id="adrs"> <br><br>
+             <label for="email">Email :</label>
+             <input required id="email" type="email" />
+        <div >
+          <small id="emailError"></small>
+        </div><br><br> <br>
+            <label for="age">Age :</label>
+            <input class="umr" style="width: 65px;" type="number" id="age">
+
+            <label for="Gender">Gender :</label>
+            <select name="sel" id="selct">
+                <option selected disabled value="select">select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select> <br><br>
+            <label for="ocupassion">Occupation :</label>
+            <input type="radio" id="radio" name="occupation" value="Student">
+            <label for="student">Student</label>
+            <input type="radio" id="radio" name="occupation" value="Proffessional">
+            <label for="student">Proffessional</label>
+            <input type="radio" id="radio" name="occupation" value="Job">
+            <label for="student">Job</label><br> <br> <br><br>
+            
+            <label for="user">Set Username :</label>
+            <input type="text" id="user"><br><br>
+            <label for="password">Set password :</label>
+            <input required id="password" type="password" />
+        <div class="small">
+          <small id="passwordError"></small>
+        </div><br><br>
+            <label for="conf" >Confirm Password :</label>
+            <input id="password" type="text"><br><br>
+            
+            </fieldset>
+            <div class="btn" >
+            <button  class="bttn" type="submit">Submit</button>
+           
+            <button class="log" type="submit">Log In</button>
+           
+            </div>
+        
+     </form>
+
+    <form id="login" >
+      <h2>Login</h2>
+        <input required id="Lid" type="text" placeholder="Username" />
+        <br />
+        <input required id="lemail" type="email" placeholder="email" />
+        
+        <br />
+        <input required id="lpassword" type="password" placeholder="password" />
+  
+        <br />
+        <button id="btn">Login</button>
+      </form> 
+      
+     <div class="dashbord">
+          
+        <h2>Your profile</h2>
+        <div id="userd">
+          
+            <img id="proimg" src="img.avif" alt=""> 
+
+            <input style="display: none;" type="file" id="file"><br><br>
+            <button style="margin-left: 2rem;" id="phto">Chose Profile Picture</button> <br><br>
+            
+            <b id="naav"></b> <br><br>
+            <b id="gao"></b><br><br>
+            <b id="mail"></b>
+            <b id="vaay"></b> <br><br>
+            <b id="kaam"></b> <br><br>
+            <b id="gen"></b> <br><br>
+
+        </div>
+
+     </div>
+
+     
+
+       <!-- ---------------------new3form--------------------------->
+      
+      
+      <footer>
+        <ul>
+          <li>
+            Address
+            <p>
+              Lorem ipsum dolor sit, amet consectetur <br />adipisicing elit.
+              Nobis, sed?
+            </p>
+          </li>
+          <li>
+            Contact
+            <p>+7021-234765</p>
+          </li>
+          <li>
+            mail
+            <p>BegJoker@gmail.com</p>
+          </li>
+        </ul>
+      </footer>
+
+    </main>
+    <script src="Login.js"></script>
+      <script src="register.js"></script>
+  </body>
+</html>
+
+
+
+
+
+    

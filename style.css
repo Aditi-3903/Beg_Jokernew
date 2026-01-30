@@ -1,0 +1,326 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    box-sizing: border-box;
+     
+     overflow-x:hidden;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+      /* gap: 1rem; */
+}
+main{
+    /* overflow-x: hidden; */
+      display: grid;
+     height: 100vh;
+     grid-template-columns: 1fr;
+     grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "header"
+                          "hero"
+                          "galary"
+                          "footer";
+}
+
+
+.header{
+     grid-area: header;
+      margin-left: 5rem;
+     
+}
+
+nav{
+   
+    height:4rem;
+    /* background-color:lightpink; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* font-size: 1rem; */
+}
+
+.beg{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.nav{
+    width: 40%;
+    display: inline-flex;
+     flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+   
+}
+.nav a {
+     text-decoration: none;
+}
+
+.icon{
+    width: 10%;
+    display: flex;
+     flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+/* ...................nav completed................. */
+
+/* ...................hero start............... */
+
+#hero{
+    width: 100%;
+    grid-area: hero;
+    height: 50rem;
+    margin-left: 5rem;
+}
+.carinfo{
+    height: 20rem;
+    width: 30rem;
+    display: none;
+     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: antiquewhite; */
+   
+}
+.carinfo h1{
+    font-size: 4rem;
+    margin: 1rem 0;
+    padding: 0;
+    
+}
+.carinfo p{
+     width: 100%;
+     height: auto;
+    font-size:1.4rem;
+     /* line-height: 25px; */
+     text-align: justify;
+     font-family:'Times New Roman', Times, serif;
+}
+
+
+
+.blue{
+    height: 500px;
+    width: 700px;
+    background-color: rgba(0, 0, 255, 0.726);
+    position: absolute;
+    top: -2.5rem;
+    right: -17.5rem;   
+    rotate: 45deg;
+    z-index: -2;
+}
+.info{
+    height: 20rem;
+    width: 50rem;
+    display: flex;
+     flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 8rem;
+    /* margin-left: 5rem; */
+}
+ h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+    padding: 0;
+}
+h4{
+    font-family:sans-serif;
+    font-weight: 500;
+    font-size: 2.3rem;
+    margin:0;
+    color: rgb(71, 71, 240);
+}
+p {
+    /* border: solid; */
+    width: 80%;
+    
+     line-height: 25px;
+     text-align: justify;
+     font-family: Arial;
+     
+   
+}
+
+ button{
+    align-self: flex-start;
+    padding: 17px;
+    color:#fff;
+    background:linear-gradient(to left,rgb(90, 90, 245),rgb(243, 49, 243));
+    font-size: 1.2rem;
+    font-family: arial;
+    border: none;
+    cursor: pointer; 
+    border-radius: 10px;
+}
+button a{
+     text-decoration: none;
+     color:#fff;
+}
+button:hover{
+      background:linear-gradient(to right,rgb(90, 90, 245),rgb(243, 49, 243));
+      color:#fff;
+}
+.frame{
+    perspective: 500px;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border: 2rem solid blue;
+    rotate: 45deg;
+    position: absolute;
+    right: 2rem;
+    top: 10rem;
+    box-shadow: -4px  7px 10px #222;
+}
+.car{
+    transform-style: preserve-3d;
+    /* border: solid 2px; */
+    height: 130%;
+    rotate: -45deg;
+    transform: translateX(-22rem);
+     /* filter: drop-shadow(8px 8px 8px rgb(10, 10, 10)); */
+}
+img{
+   
+    height: 110%;
+    width: 220%;
+     /* transform: rotateY(6deg); */
+    
+}
+
+@keyframes entr{
+    0%{transform: scale(0)};
+    25%{transform: scale(0.3)};
+    50%{transform: scale(0.6)}
+    100%{transform: scale(1)};
+}
+
+/* ....................hero end............... */
+
+/* ....................Gallary start.................. */
+
+
+.galary{
+    background-color: aliceblue;
+    width: 90%;
+    height: auto;
+     justify-self: center;
+   /* margin:0 2rem 3rem 2rem; */
+   
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* gap: 2rem; */
+    transform-style: preserve-3d;
+    /* border: 2px solid; */
+    
+}
+.carddiff{
+    height: 25rem;
+    width: 20rem;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    border-radius: 20px;
+    box-shadow: 2px 3px 8px black;
+    color: #161515;
+    /* overflow: hidden; */
+    margin-bottom: 2rem;
+    border: 1px solid white;
+    text-align: center;
+     background: linear-gradient(to top, rgb(98, 98, 244),rgb(229, 228, 250) 50%);
+}
+/* .frm:hover{
+    transform:perspective(600px) translateZ(30px);
+    cursor: pointer;
+} */
+.carddiff:hover{
+    transform:perspective(600px) translateZ(30px);
+    cursor: pointer;
+}
+.carddiff p{
+   
+    width: 80%;
+    text-align: center;
+    justify-self: center;
+}
+
+
+
+
+/* .frm1{
+    grid-area: frm1;
+}
+.frm2{
+    grid-area: frm2;
+}
+.frm3{
+    grid-area: frm3;
+} */
+
+
+/* .frm1 img,.frm2 img,.frm3 img,.frm4 img,.frm5 img,.frm6 img {
+   height: auto;
+    width: 90%; haa aahe n code img ch hoo
+
+} */
+
+.carddiff img{
+   height: auto;
+    width: 90%; 
+}
+
+/* .img{
+    height: 50%;
+    width: 100%; */
+    /* background: linear-gradient(rgb(227, 227, 230),rgb(108, 107, 107) 50%); */
+/* } */
+/* .modl{
+    background-color:transparent;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.frm p{ haa hech aahe vatte hmm
+    width: 80%;
+    text-align: center;
+} */
+
+/* ....................Gallary end...................... */
+
+/* ...........footer start................ */
+footer{
+    grid-area: footer;
+    background-color: rgb(201, 205, 249);
+    font-family: monospace;
+    color: #393838;
+    font-size: 1.2rem;
+   
+    /* margin-left: -5rem; */
+    height: 130px;
+    text-align:justify ;
+}
+footer ul{
+    /* list-style: none; */
+    display: flex;
+     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px;
+    font-weight: bold ;
+    
+}
+footer p{
+    font-size: 1rem;
+    width: 100%;
+    font-weight:lighter ;
+} 
