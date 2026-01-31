@@ -33,6 +33,10 @@
             <i id="intsa" class="fa-brands fa-instagram"></i>
             <i id="twit" class="fa-brands fa-twitter"></i>
           </div>
+          <div class="icon2">
+             <i  id="Pro"class="fa-solid fa-user"></i>
+             <i id="menu" class="fa-solid fa-bars"></i>
+          </div>
         </nav>
       </div>
 
@@ -40,10 +44,10 @@
           <div class="contact">
             <h2>Contact Us</h2>
       <form >
-        <input required  type="text" placeholder="Username" />
-        <input required type="email" placeholder="Email" />
-        <input id="msg" type="text" placeholder="Massage"/>
-        <button >Send Massage</button>
+        <input id="UserName" required  type="text" placeholder="Username" />
+        <input id="Usermail"  required type="email" placeholder="Email" />
+        <input id="msg" required  type="text" placeholder="Massage"/>
+        <button onclick="myMsg()">Send Message</button>
       </form> 
       
           </div>
@@ -72,5 +76,24 @@
         </ul>
       </footer>
     </main>
+
+    <script>
+      function myMsg(T){
+       let msg = document.querySelector("#msg");
+       let msg2= msg.value;
+
+       if(msg2 == ""){
+            alert("u didnt type anything.");
+
+       }
+       else{
+           alert("Message sent");
+       }
+      
+      
+
+      };
+     
+    </script>
   </body>
 </html>

@@ -43,3 +43,39 @@ body{
 .card p{
      line-height: 2.4rem;
 }
+
+
+@media screen and (max-width:420px){
+
+
+    .beg{
+        font-size: large;
+        margin: 0;
+    }
+    .nav{
+        font-size: 15px;
+        display: none;
+       
+    }
+
+    .icon{
+        display:none;
+    }
+
+    .icon2{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 1.2rem;
+         margin-right: 30px;
+         gap: 10px;
+    }
+    .card{
+        width: 300px;
+    }
+    
+
+    
+   
+}

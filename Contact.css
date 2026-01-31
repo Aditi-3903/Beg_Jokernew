@@ -50,3 +50,38 @@ form button{
      width: 100%;
      font-size: 1.3rem;
 }
+
+@media screen and (max-width:px){
+
+
+    .beg{
+        font-size: large;
+        margin: 0;
+    }
+    .nav{
+        font-size: 15px;
+        display: none;
+       
+    }
+
+    .icon{
+        display:none;
+    }
+
+    .icon2{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 1.2rem;
+         margin-right: 30px;
+         gap: 10px;
+    }
+    .contact{
+        width: 300px;
+    }
+    
+
+    
+   
+}

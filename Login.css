@@ -151,7 +151,7 @@ option{
     width: 30rem;
     height: auto;
     border: solid 2px blue;
-    display:flex;
+    display:none;
     flex-direction: column;
    background-color: #d5ddfa;
     justify-self: center;
@@ -182,4 +182,104 @@ option{
     justify-content: space-between;
     height: auto;
     color: #0b2693;
+}
+
+@media screen and (max-width:420px){
+
+
+    .beg{
+        font-size: large;
+        margin-left: 0;
+    }
+    .nav{
+        font-size: 15px;
+        display: none;
+       
+    }
+
+    .icon{
+        display:none;
+    }
+
+    .icon2{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 1.2rem;
+         margin-right: 30px;
+         gap: 10px;
+    }
+    
+    .form{
+        width: 360px;
+       
+    }
+    
+    fieldset{
+         width: 300px;
+        
+    }
+
+    .form input{
+       width:auto;
+       padding: 5px;
+    }
+    
+    label{
+         font-size: 15px;
+    }
+   .umr,#selct{
+    margin-right: 1rem;
+    border-radius: 5px;
+    padding:5px 8px;
+    font-size: 1.1rem;
+   
+}
+
+option{
+   
+    font-size: 10px;
+}
+
+    #radio{
+        width:10px ;
+        margin: 2px;
+    }
+
+    .bttn{
+        font-size: 16px;
+        padding: 8px 15px;
+
+    }
+    .log{
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+
+    #login{
+        width: 300px;
+        height: auto;
+    }
+
+    .dashbord{
+      
+        width: 300px;
+       
+    }
+    .dashbord img{
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+       
+    }
+
+    .dashbord button{
+        position: absolute;
+        left: 70px;
+        font-size: 18px;
+    }
+    .dashbord b{
+        font-size: small;
+    }
 }

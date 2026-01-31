@@ -38,6 +38,9 @@ nav{
     /* font-size: 1rem; */
 }
 
+.icon2{
+    display:none;
+}
 .beg{
     font-size: 1.3rem;
     font-weight: 600;
@@ -306,7 +309,7 @@ footer{
     font-size: 1.2rem;
    
     /* margin-left: -5rem; */
-    height: 130px;
+    height: auto;
     text-align:justify ;
 }
 footer ul{
@@ -324,3 +327,132 @@ footer p{
     width: 100%;
     font-weight:lighter ;
 } 
+
+@media screen and (max-width:420px){
+
+ 
+
+    #hero{
+        width:620px;
+         margin:0 10px;
+    }
+    .beg{
+        margin: 0;
+    }
+    .nav{
+        font-size: 15px;
+        display: none;
+       
+    }
+
+    .icon{
+        display:none;
+    }
+
+    .icon2{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 1.2rem;
+         margin-right: 30px;
+         gap: 10px;
+    }
+
+    .info{
+        height: auto;
+        width:170px;
+        padding: 50px;
+        position: absolute;
+        top: -10px;
+    
+    }
+    .carinfo{
+        height:auto;
+        width:170px;
+        padding: 10px;
+        position: absolute;
+        top: -10px;
+    }
+    .carinfo h1{
+        font-size: 20px;
+    }
+    .carinfo p{
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .carinfo button{
+        font-size: x-small;
+        padding: 10px;
+    }
+    .info h1{
+        font-size: 15px;
+    }
+    .info h4{
+        font-size: smaller;
+    }
+    .info p{
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .info button{
+        font-size: x-small;
+        padding: 10px;
+    }
+
+    .blue{
+        height: 400px;
+        width: 500px;
+        position: absolute;
+        left:420px;
+        top:-50px;
+         rotate: 45deg;
+         border-radius: 0 150% 0 0;
+    }
+    .frame{
+       
+        width:190px;
+        position:absolute;
+        right:-200px;
+        height: 190px;
+        border: 15px solid rgb(29, 29, 227);
+        background-color: rgb(251, 249, 246);
+    }
+
+    .car{
+        height: auto;
+        width: 180px;
+        position: absolute;
+        top:-160px;
+        right:-140px;
+    } 
+
+    .galary{
+        margin-top: -200px;
+    }
+    
+    .carddiff{
+        width: 40%;
+       
+    }
+
+    footer{
+        height:auto;
+    }
+
+    footer ul{
+    /* list-style: none; */
+    display: flex;
+    align-items: flex-start;
+   align-content: space-between;
+   flex-direction: column;
+    gap: 15px;
+}
+
+    footer p{
+        font-size: small;
+    }
+
+}
+    
+
