@@ -6,6 +6,7 @@
 }
 
 .container{
+    grid-area: hero,galary;
     display:flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -138,13 +139,90 @@
 
 }
 
-.bottom button{
-    position: relative;
-    top: 120px;
+#btnftr{
+    align-self: center;
    /* height: 80px;
    width: 200px; */
    border-radius: 50px;
    padding: 1rem 3rem;
    
+}
 
+
+@media (max-width: 420px) {
+
+    .container{
+        margin: 1rem;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .top{
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .top div{
+        width: 70%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .middle{
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0;
+        gap: 20px;
+    }
+
+    .card{
+        width: 100%;
+        top: 0;
+    }
+
+    .card img{
+        height: 150px;
+    }
+
+    #bigimg{
+        height: 260px;
+        top: 0;
+        left: 0;
+        margin: auto;
+        display: block;
+    }
+
+    .colors{
+        position: static;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .colors button{
+        margin: 8px;
+    }
+
+    .bottom{
+         justify-self: center;
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding-bottom: 2rem;
+    }
+
+    .one, .two, .three, .four{
+        width: 90%;
+        height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+   #btnftr{
+    align-self: center;
+    width: 60%;
+    }
 }

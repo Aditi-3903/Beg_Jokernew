@@ -2,6 +2,7 @@
 body{
     position: relative;
     height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +10,7 @@ body{
 }
 
 .card {
-    margin: 4rem;
+    margin-top: 4rem;
     background-color: #ebebf6;
     border: 1px solid #ddd;
     height: auto;
@@ -24,7 +25,6 @@ body{
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 16px;
-    align-self: center;
     justify-self: center;
     transition: box-shadow 0.3s ease;
 }
@@ -52,17 +52,35 @@ body{
         font-size: large;
         margin: 0;
     }
-    .nav{
-        font-size: 15px;
-        display: none;
+     /* nav{
+        display: flex;
+        width: 100vw;
+        justify-content: space-between;
+    } */
+     /* .nav{
        
+        display:none;
+        
     }
+    .active{
+         font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: auto;
+        position: absolute;
+        top: 3rem;
+        right: -3rem;
+        padding: 10px;
+        background-color: aliceblue;
+    }
+ */
 
     .icon{
-        display:none;
+        display:flex;
     }
 
-    .icon2{
+    /* .icon2{
         display:flex;
         align-items: center;
         justify-content: center;
@@ -70,9 +88,10 @@ body{
         font-size: 1.2rem;
          margin-right: 30px;
          gap: 10px;
-    }
+    } */
     .card{
         width: 300px;
+        
     }
     
 

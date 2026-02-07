@@ -23,7 +23,8 @@ main{
 
 .header{
      grid-area: header;
-      margin-left: 5rem;
+     margin-left: 5rem;
+    
      
 }
 
@@ -38,9 +39,10 @@ nav{
     /* font-size: 1rem; */
 }
 
-.icon2{
+/* .icon2{
     display:none;
-}
+    cursor: pointer;
+} */
 .beg{
     font-size: 1.3rem;
     font-weight: 600;
@@ -65,9 +67,42 @@ nav{
     color: white;
     margin-right: 2rem;
     font-size: 1.2rem;
+     cursor: pointer;
+}
+#menu{
+    display: none;
 }
 /* ...................nav completed................. */
+.dashbordOne{
+    width: 800px;
+    height: auto;
+    background-color: lightblue;
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid blue;
+      position: absolute;
+        top: 7rem;
+        right: 2rem;
+        z-index: 1;
+}
 
+.show{
+    display: flex;
+    
+}
+
+.dashbordOne img,.dashbordTwo img{
+    width: 600px;
+    height: auto;
+     border-radius: 50%;
+}
+.dashbordOne button{
+  align-self: center;
+
+}
 /* ...................hero start............... */
 
 #hero{
@@ -321,7 +356,7 @@ footer ul{
     margin: 10px 30px;
     font-weight: bold ;
     
-}
+} 
 footer p{
     font-size: 1rem;
     width: 100%;
@@ -330,49 +365,111 @@ footer p{
 
 @media screen and (max-width:420px){
 
+    body{
+        margin-right: -6rem;
+        overflow-x: hidden;
+    }
+    
+    .header{
+
+        margin: 0;
+        width: 100vw;
+        padding-left: 5rem;
+    }
+
+    .dashbordOne{
+   display:none;
+    transition: transform 0.4s cubic-bezier(0.68,-0.55,0.27,1.55);
+    }
+
+.show{
+    display:flex;
+     width: 300px;
+    font-size: 1rem;
+    top: 60px;
+    right: -40px;
+    animation: swipe 4s;
+
  
+}
+
+@keyframes swipe {
+
+    from{
+        left:100px;
+    }
+     to{
+        left:30px;
+    }
+    
+}
+.dashbordOne img{
+    width: 250px;
+    justify-self: center;
+}
+    .dashbordOne button{
+        font-size: small;
+    }
 
     #hero{
-        width:620px;
+        
+        width:100vw;
          margin:0 10px;
     }
     .beg{
         margin: 0;
     }
+    nav{
+        display: flex;
+        width: 100vw;
+        justify-content: space-between;
+    }
     .nav{
-        font-size: 15px;
-        display: none;
        
+        display:none;
+        
+    }
+    .active{
+   
+         font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: auto;
+        position: absolute;
+        top: 3rem;
+        right: -3rem;
+        padding: 10px;
+        background-color: aliceblue;
     }
 
-    .icon{
+    #face,#insta,#twit{
         display:none;
     }
 
-    .icon2{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        color: black;
-        font-size: 1.2rem;
-         margin-right: 30px;
-         gap: 10px;
+    .icon{
+        width: 20%;
+        display: flex;
+    }
+    #menu{
+        display:initial;
     }
 
     .info{
         height: auto;
-        width:170px;
+        width:100%;
         padding: 50px;
         position: absolute;
-        top: -10px;
-    
+        top: 23rem;
+        /* justify-self: center; */
+        flex:wrap;
     }
     .carinfo{
-        height:auto;
-        width:170px;
-        padding: 10px;
+        height: auto;
+        width:350px;
+        padding: 20px;
         position: absolute;
-        top: -10px;
+        top: 25rem;
     }
     .carinfo h1{
         font-size: 20px;
@@ -392,6 +489,7 @@ footer p{
         font-size: smaller;
     }
     .info p{
+       
         font-size: 10px;
         line-height: 13px;
     }
@@ -401,43 +499,41 @@ footer p{
     }
 
     .blue{
-        height: 400px;
-        width: 500px;
-        position: absolute;
-        left:420px;
-        top:-50px;
-         rotate: 45deg;
-         border-radius: 0 150% 0 0;
+        display: none;
     }
+
     .frame{
-       
-        width:190px;
-        position:absolute;
-        right:-200px;
-        height: 190px;
+       margin-right:-4rem;
+        width:200px;
+        /* position:absolute;
+        right:0px; */
+        justify-self: center;
+        align-items: center;
+        height: 200px;
         border: 15px solid rgb(29, 29, 227);
         background-color: rgb(251, 249, 246);
     }
 
     .car{
         height: auto;
-        width: 180px;
+        width: 170px;
         position: absolute;
         top:-160px;
-        right:-140px;
+        right:-130px;
     } 
 
     .galary{
-        margin-top: -200px;
+        /* margin-top: -100px; */
     }
     
     .carddiff{
-        width: 40%;
+        width: auto;
        
     }
 
     footer{
         height:auto;
+        width: 100%;
     }
 
     footer ul{

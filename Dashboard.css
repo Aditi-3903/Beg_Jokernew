@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+body{
+      height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  /* align-content: space-between; */
+}
+
+section{
+flex: 1;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto;
+grid-template-areas: "sidebar cont1"
+                      "sidebar cont2";
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: aqua;
+}
+
+
+
+.cont1{
+    grid-area: cont1;
+    background-color: bisque;
+}
+.cont2{
+    grid-area: cont2;
+    background-color: brown;
+}

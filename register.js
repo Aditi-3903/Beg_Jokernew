@@ -5,9 +5,10 @@ let loig = document.querySelector("#btn");
 let login = document.querySelector("#login");
 let profile = document.querySelector("#phto");
  let file= document.querySelector("#file");
+  let form = document.querySelector(".form");
 
 
-
+ 
 
 button.addEventListener("click", (data)=>{
     data.preventDefault();
@@ -62,23 +63,19 @@ button.addEventListener("click", (data)=>{
         username: username.value,
         passward: password.value
     };
-
+   
 
     localStorage.setItem("usr", JSON.stringify(userdata));
     alert("Info Saved");
     form.style.display = "none";
     login.style.display ="flex";
     }
-
-    
    
-
-    // console.log(JSON.parse(localStorage.getItem("usr")));
 });
  
 reg.addEventListener("click", (data)=>{
     data.preventDefault();
-    let form = document.querySelector(".form");
+   
     form.style.display = "none";
     login.style.display ="flex"; 
 });
@@ -87,39 +84,50 @@ reg.addEventListener("click", (data)=>{
 loig.addEventListener("click",(data)=>{
     data.preventDefault();
    let mail = document.querySelector("#lemail");
-let pass = document.querySelector("#lpassword");
+   let pass = document.querySelector("#lpassword");
 
     let gg = JSON.parse(localStorage.getItem("usr"));
-    let naav = document.querySelector("#naav");
-    let adres = document.querySelector("#gao");
-    let age = document.querySelector("#vaay");
-    let kaam = document.querySelector("#kaam");
-    let gen = document.querySelector("#gen");
-    let dash = document.querySelector(".dashbord");
+ let gh = JSON.parse(localStorage.getItem("usrData"));
+    
+    let naavi = document.querySelector("#naavi");
+    // let adres = document.querySelector("#gao");
+    // let age = document.querySelector("#vaay");
+    // let kaam = document.querySelector("#kaam");
+    // let gen = document.querySelector("#gen");
+    
     let Lid = document.querySelector("#Lid");
     
     if(Lid.value === gg.username && pass.value === gg.passward && mail.value === gg.email){
 
         // console.log("gg");
-        dash.style.display = "flex";
+        // dash.style.display = "flex";
         login.style.display ="none";
+        form.style.display = "flex";
 
-        // document.querySelector("img").setAttribute("src"," ");
-        naav.textContent = `Name: ${gg.nmm}`;
-        adres.textContent =`Address ${gg.adrs}`;
-        mail.textContent = `email: ${gg.email}`;
-        age.textContent = `Age: ${gg.age}`;
+        alert("Log in success");
+       let obj={
+        Name: `${gg.nmm}`,
+        Address: `${gg.adrs}`,
+        Email: `${gg.email}`,
+        Age: `${gg.age}`,
+        Occupation: `${gg.occupation}`,
+        Gender: `${gg.gender}`,
+    };
+    
+     localStorage.setItem("usrData", JSON.stringify(obj));
 
-
-        kaam.textContent = `occupation: ${gg.occupation}`;
-        gen.textContent = `Gender: ${gg.gender}`;
+    naavi.textContent = `${gh.Name}`;
+   console.log(gh.Name);
     }
     else{
 
+       
         alert("You entered wrong credential");
     }
     
 });
+
+ 
 
 profile.addEventListener("click", ()=>{
    file.click();
@@ -131,11 +139,17 @@ profile.addEventListener("click", ()=>{
     you.setAttribute("src",prfl);
 
 
-   });
+   });discuss
 
 });
 
 
 
-
+// document.querySelector("img").setAttribute("src"," ");
+//         naav.textContent = `Name: ${gg.nmm}`;
+//         adres.textContent =`Address ${gg.adrs}`;
+//         mail.textContent = `Email: ${gg.email}`;
+//         age.textContent = `Age: ${gg.age}`;
+//         kaam.textContent = `Occupation: ${gg.occupation}`;
+//         gen.textContent = `Gender: ${gg.gender}`;
   

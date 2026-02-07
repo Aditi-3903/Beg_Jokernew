@@ -29,17 +29,37 @@
 
           <div class="icon" style="color: black">
              <i  id="Pro"class="fa-solid fa-user"></i>
+              <i id="menu" class="fa-solid fa-bars"></i>
             <i id="face" class="fa-brands fa-facebook"></i>
-            <i id="intsa" class="fa-brands fa-instagram"></i>
+            <i id="insta" class="fa-brands fa-instagram"></i>
             <i id="twit" class="fa-brands fa-twitter"></i>
           </div>
-          <div class="icon2">
+          <!-- <div class="icon2">
              <i  id="Pro"class="fa-solid fa-user"></i>
-             <i id="menu" class="fa-solid fa-bars"></i>
-          </div>
+            
+          </div> -->
         </nav>
       </div>
+            <div class="dashbordOne">
+          
+        <h2>Your profile</h2>
+        <div id="userd">
+          
+            <img id="proimgOne" src="img.avif" alt=""> 
 
+            <input style="display: none;" type="file" id="fileOne"><br><br>
+            <button style="margin-left: 2rem;" id="phtoOne">Chose Profile Picture</button> <br><br>
+            
+            <b id="naav"></b> <br><br>
+            <b id="gao"></b><br><br>
+            <b id="mail"></b>
+            <b id="vaay"></b> <br><br>
+            <b id="kaam"></b> <br><br>
+            <b id="gen"></b> <br><br>
+
+        </div>
+       <button id="Act"><a href="Dashboard.html">My Activities</a></button>
+     </div>
 
           <div class="contact">
             <h2>Contact Us</h2>
@@ -78,6 +98,45 @@
     </main>
 
     <script>
+ let proicn = document.querySelector("#Pro");
+ let nav = document.querySelector(".nav");
+ let menuicn = document.querySelector("#menu");
+ 
+
+        menuicn.addEventListener("click",()=>{
+
+          nav.classList.toggle("active");
+        });
+
+        let dash = document.querySelector(".dashbordOne");
+
+//  proicn.addEventListener("click", function(){
+//     Dashbord.classList.toggle("show");
+    proicn.addEventListener("click", () => {
+ 
+    //   dash.style.display = "flex";
+   dash.classList.toggle("show");
+  
+   let gh = JSON.parse(localStorage.getItem("usrData"));
+   let naav = document.querySelector("#naav");
+    let adres = document.querySelector("#gao");
+    let age = document.querySelector("#vaay");
+    let kaam = document.querySelector("#kaam");
+    let gen = document.querySelector("#gen");
+
+   
+
+        naav.textContent = `Name: ${gh.Name}`;
+        adres.textContent =`Address ${gh.Address}`;
+        mail.textContent = `Email: ${gh.Email}`;
+        age.textContent = `Age: ${gh.Age}`;
+        kaam.textContent = `Occupation: ${gh.Occupation}`;
+        gen.textContent = `Gender: ${gh.Gender}`;
+
+        
+ });
+ 
+   
       function myMsg(T){
        let msg = document.querySelector("#msg");
        let msg2= msg.value;

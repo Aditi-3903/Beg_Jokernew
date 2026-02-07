@@ -14,7 +14,68 @@ let heading = document.querySelector(".carinfo h1");
 
 let para = document.querySelector(".carinfo p");
 
+//   let proicn = document.querySelector("#Pro");
+ let nav = document.querySelector(".nav");
+ let menuicn = document.querySelector("#menu");
+ let dash = document.querySelector(".dashbordOne");
+let proicn = document.querySelector("#Pro");
 
+ 
+
+        menuicn.addEventListener("click",()=>{
+
+          nav.classList.toggle("active");
+        });
+
+
+         proicn.addEventListener("click", () => {
+ 
+    //   dash.style.display = "flex";
+   dash.classList.toggle("show");
+   let gh = JSON.parse(localStorage.getItem("usrData"));
+   let naav = document.querySelector("#naav");
+    let adres = document.querySelector("#gao");
+    let age = document.querySelector("#vaay");
+    let kaam = document.querySelector("#kaam");
+    let gen = document.querySelector("#gen");
+
+   
+
+        naav.textContent = `Name: ${gh.Name}`;
+        adres.textContent =`Address ${gh.Address}`;
+        mail.textContent = `Email: ${gh.Email}`;
+        age.textContent = `Age: ${gh.Age}`;
+        kaam.textContent = `Occupation: ${gh.Occupation}`;
+        gen.textContent = `Gender: ${gh.Gender}`;
+
+ });
+
+
+
+
+
+
+
+  //  let gg = JSON.parse(localStorage.getItem("usr"));
+  //   let naav = document.querySelector("#naav");
+  //   let adres = document.querySelector("#gao");
+  //   let age = document.querySelector("#vaay");
+  //   let kaam = document.querySelector("#kaam");
+  //   let gen = document.querySelector("#gen");
+  //   // let Lid = document.querySelector("#Lid");
+    
+  //   naav.textContent = `Name: ${gg.nmm}`;
+  //       adres.textContent =`Address ${gg.adrs}`;
+  //       mail.textContent = `Email: ${gg.email}`;
+  //       age.textContent = `Age: ${gg.age}`;
+
+  //       kaam.textContent = `Occupation: ${gg.occupation}`;
+  //       gen.textContent = `Gender: ${gg.gender}`;
+   
+
+//  });
+
+ 
 gallary.addEventListener("click", function(data){
   
     let img = data.target.parentNode.childNodes[1].src;
@@ -51,8 +112,6 @@ gallary.addEventListener("click", function(data){
     iterations: 1,
   },
 );
-  
-
-
-
+ 
 });
+
